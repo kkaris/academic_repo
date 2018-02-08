@@ -127,6 +127,11 @@ def k_neighbors(adj, index, k):
 
 # Functions with one dependency
 def adj_from_edgelist(edge_list):
+    """
+
+    :param edge_list: edgelist with acceptor donor pairs and the edge weight
+    :return: adj_m - the adjacency matrix corresponding to the edgelist
+    """
     members = uniqe_components(edge_list)
     adj_m = np.zeros(shape=(len(members), len(members)))
 
